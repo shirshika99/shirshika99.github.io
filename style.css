@@ -1,5 +1,5 @@
 
-/* General website styling */
+/* ===== GLOBAL STYLING ===== */
 
 * {
     margin: 0;
@@ -13,82 +13,109 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f7fb;
-    color: #17243a;
-    line-height: 1.6;
+    background: #f5f7fb;
+    color: #1e293b;
+    line-height: 1.7;
 }
 
-/* Navigation bar */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #60a5fa;
+}
+
+/* ===== NAVIGATION ===== */
 
 header {
-    background-color: #14243b;
+    background: #101f36;
     padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
     color: white;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 22px;
+    color: #e2e8f0;
+    margin-left: 18px;
+    font-size: 14px;
 }
 
-/* Hero section */
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* ===== HERO SECTION ===== */
 
 .hero {
-    background-color: #14243b;
+    background: linear-gradient(135deg, #101f36, #1d416b);
     color: white;
-    padding: 100px 8%;
+    padding: 115px 8%;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 46px;
-    margin-bottom: 15px;
+    font-size: 48px;
+    margin-bottom: 12px;
 }
 
 .hero h2 {
-    color: #65b3ff;
+    color: #60a5fa;
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
 .hero p {
-    max-width: 650px;
+    max-width: 680px;
     margin: auto;
+    color: #dbeafe;
     font-size: 17px;
 }
 
-/* Common sections */
+/* ===== COMMON SECTIONS ===== */
 
 section {
-    padding: 70px 8%;
+    padding: 80px 8%;
 }
 
 section h2 {
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: #14243b;
 }
 
-/* About section */
+/* ===== ABOUT ===== */
 
 .about {
     max-width: 850px;
     margin: auto;
     text-align: center;
+    color: #475569;
 }
 
-/* Skills section */
+.about p {
+    margin-bottom: 15px;
+}
+
+/* ===== SKILLS ===== */
 
 .skills-container {
     display: flex;
@@ -98,66 +125,111 @@ section h2 {
 }
 
 .skill {
-    background-color: white;
-    padding: 15px 25px;
+    background: white;
+    padding: 14px 25px;
     border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    border: 1px solid #dbeafe;
+    color: #1d4ed8;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* Project cards */
+.skill:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ===== PROJECTS AND CERTIFICATES ===== */
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
 .project-card {
-    background-color: white;
-    padding: 25px;
+    background: white;
+    padding: 28px;
     border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.09);
 }
 
 .project-card h3 {
-    color: #1765a8;
-    margin-bottom: 12px;
+    color: #1d4ed8;
+    margin-bottom: 14px;
+    font-size: 20px;
 }
 
-/* Contact section */
+.project-card p {
+    color: #64748b;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* ===== CONTACT ===== */
 
 .contact {
     text-align: center;
-    background-color: #e8eef7;
+    background: #eaf1fb;
 }
 
-/* Footer */
+.contact p {
+    margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
 
 footer {
-    background-color: #14243b;
-    color: white;
+    background: #101f36;
+    color: #cbd5e1;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    font-size: 14px;
 }
 
-/* Mobile responsiveness */
+/* ===== MOBILE RESPONSIVENESS ===== */
 
 @media (max-width: 600px) {
 
+    header {
+        padding: 18px 5%;
+    }
+
     nav {
         flex-direction: column;
-        gap: 15px;
     }
 
     nav a {
+        display: inline-block;
         margin: 5px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 80px 6%;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
     }
 
     section {
-        padding: 50px 6%;
+        padding: 55px 6%;
+    }
+
+    section h2 {
+        font-size: 27px;
     }
 }
